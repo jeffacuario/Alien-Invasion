@@ -13,6 +13,10 @@ def run_game():
     Initialize game, settings and screen object
     """
     pygame.init()
+    pygame.mixer.init()
+    pygame.mixer.music.load("music/Retro Platforming- David Fesliyan.mp3")
+    pygame.mixer.music.play()
+
     ai_settings = Settings()
     screen = pygame.display.set_mode(
         (ai_settings.screen_width, ai_settings.screen_height))
